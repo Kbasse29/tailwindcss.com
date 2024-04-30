@@ -57,7 +57,7 @@ Use the `grid-cols-subgrid` utility to adopt the column tracks defined by the it
 </div>
 ```
 
-```html
+```HTML
 <div class="grid grid-cols-4 gap-4">
   <div>01</div>
   <!-- ... -->
@@ -86,17 +86,17 @@ Use the `grid-cols-subgrid` utility to adopt the column tracks defined by the it
 
 ### Customizing your theme
 
-By default, Tailwind includes `grid-template-column` utilities for creating basic grids with up to 12 equal width columns. You can customize these values by editing `theme.gridTemplateColumns` or `theme.extend.gridTemplateColumns` in your `tailwind.config.js` file.
+By default, Tailwind includes `grid-template-column` utilities for creating basic grids with up to 12 equal-width columns. You can customize these values by editing `theme.gridTemplateColumns` or `theme.extend.gridTemplateColumns` in your `tailwind.config.js` file.
 
-You have direct access to the `grid-template-columns` CSS property here so you can make your custom column values as generic or as complicated and site-specific as you like.
+You have direct access to the `grid-template-columns` CSS property here to make your custom column values as generic or as complicated and site-specific as you like.
 
 ```diff-js {{ filename: 'tailwind.config.js' }}
   module.exports = {
     theme: {
       extend: {
-        gridTemplateColumns: {
+        grid template columns: {
           // Simple 16 column grid
-+         '16': 'repeat(16, minmax(0, 1fr))',
++         '16': 'repeat(16, min-max(0, 1fr))',
 
           // Complex site-specific column configuration
 +         'footer': '200px minmax(900px, 1fr) 100px',
@@ -106,7 +106,7 @@ You have direct access to the `grid-template-columns` CSS property here so you c
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
+You can learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
 ### Arbitrary values
 
